@@ -1,11 +1,11 @@
-# RestAssured_Testing
+# GReaTEST
 
 GReaTEST - Rest API Testing Tool
 
-What is GReaTEST?
+# What is GReaTEST?
 GReaTEST is a  REST testing and API microbenchmarking tool. Tests are defined as basic YAML files. There is no code required. Logic is written and extensible in Groovy.
 
-How to Use it?
+# How to Use it?
 	To use GReaTEST, follow these steps:
 	Validating a Rest End point. (How?)
 	Capture response times of a Rest End Point on concurrent executions (How?)
@@ -16,7 +16,7 @@ How to Use it?
 	To run tests despite no new changes, execute the following command:
           --rerun-tasks
                                  
-What is the Test Set Syntax?
+# What is the Test Set Syntax?
 	There are five top-level test syntax elements:
 	name : Provide the name of the test case that is being verified
 	url: Provide the URL of a simple test, fetches given url via GET request, and checks for good response code
@@ -24,10 +24,10 @@ What is the Test Set Syntax?
 	benchmark: a fully defined benchmark (example maybe??)
 	validators: simple assertions about what is expected, and what is the actual value
 
-How to Write a Simple Test?    
+# How to Write a Simple Test?    
 	Write the test cases in a simple YAML format which contains the test data, validations, and the rest end points as follows: (What is this test case trying to achieve)
 
-What is Benchmarking?
+# What is Benchmarking?
 Benchmarks are based off of tests: (Not sure what this means??)
 Benchmarking extend the configuration elements in a test, therby allowing you to configure the REST call similarly. However, they do not perform validation on the HTTP  response, instead collect metrics. You can simulate concurrent requests, and calculate the response times of the rest end points. (How??)
   There are a few custom configuration options specific to benchmarks:
@@ -35,7 +35,7 @@ benchmark: (default is 10 if not specified) Run the benchmark to generate concur
 execution: (default is 100 if unspecified)
 output_file: (default is None) By default it is an XLS file, You can configure it to DB. (How??)
 
-Glossary Terms
+# Glossary Terms
 Following are some of the commonly used terms:
 	RestAPIPreProcessor:
 		Responsible for performing all pre-processing tasks required for executing Rest testing. Some of the major tasks are:
@@ -51,7 +51,7 @@ Following are some of the commonly used terms:
 	RestAPIResultsPublisher:
 		Publishes results into database (REST_TEST_RESULTS)
 
-Frequently Asked Questions
+# Frequently Asked Questions
 Q. Where to provide the application and db configuration details
 	Configuration related to app and db should be provided in 'config.property' file
 Q. How many types of tests can be performed?
