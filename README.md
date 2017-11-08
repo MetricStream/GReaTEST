@@ -17,6 +17,7 @@
 # What is GReaTEST?
 - GReaTEST - Rest API Testing Tool
 - GReaTEST is a  REST testing and API microbenchmarking tool. Tests are defined as basic YAML files. There is no code required. Logic is written and extensible in Groovy.
+- Providies capability to exetend type of security implementation
 
 # How to Use it?
 ## To use GReaTEST, follow below steps:
