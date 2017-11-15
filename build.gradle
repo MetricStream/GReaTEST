@@ -15,15 +15,6 @@ repositories {
     // You can declare any Maven/Ivy/file repository here.
     jcenter()
 	mavenCentral()
-	maven {
-		url "http://msi-vmplaftool:8081/artifactory/ext-release-local"
-	}
-	maven {
-		url "http://msi-vmplaftool:8081/artifactory/libs-release-local"
-	}
-	maven {
-		url "http://msi-vmplaftool:8081/artifactory/libs-snapshot-local"
-	}
 }
 
 buildscript {
@@ -99,26 +90,6 @@ dependencies {
 	
 	
 }
-sonarqube {
-  properties {
-    property "sonar.projectName", "RestAssured_Testing"
-    property "sonar.projectKey", "com.metricstream:RestAssured_Testing"
-    property "sonar.host.url", "http://msi-vmdev2:9000/"
-    property "sonar.jdbc.driverClassName", "com.mysql.jdbc.Driver"
-    property "sonar.projectDescription", "RestAssured_Testing"
-    property "sonar.scm.disabled", "true"
-    property "sonar.svn.username", "bar.team"
-    property "sonar.svn.password.secured", "Metric_2012"
-    property "sonar.scm.url", "http://msgit.metricstream.com/Rnd-Tools/RestAssured_Testing.git"
-    property "sonar.scm.provider", "git"
-    property "sonar.scm-stats.enabled", "false"
-    property "sonar.scm-stats.authors.ignore", "bar.team"
-    property "sonar.scm-stats.period1", "0"
-    property "sonar.scm-stats.period2", "60"
-    property "sonar.scm-stats.period3", "14"
-  }
-}
-
 /*test {
     filter {
         includeTestsMatching "*unitTest"
