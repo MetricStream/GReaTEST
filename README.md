@@ -92,6 +92,8 @@
 		- Publishes results into database (REST_TEST_RESULTS)
 
 # Frequently Asked Questions
+	## What is supported Java version
+		- This project support Java 8
 	## Where to provide the application and db configuration details
 		- Configuration related to app and db should be provided in 'config.property' file
 	## How many types of tests can be performed?

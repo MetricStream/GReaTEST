@@ -70,7 +70,7 @@ dependencies {
 	
 	compile group: 'io.rest-assured', name: 'json-path', version: '3.0.1'
 	
-	compile group: 'oracle', name: 'ojdbc6', version: '11.2.0.4.0'
+	//compile group: 'oracle', name: 'ojdbc6', version: '11.2.0.4.0'
 	
 	compile group: 'io.rest-assured', name: 'rest-assured', version: '3.0.1'
 	

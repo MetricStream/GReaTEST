@@ -143,10 +143,17 @@ public class RestAPIThreadExecutor implements Callable {
 	 * @param parameterFile
 	 */
 	void loadProperties(String queryFile, String parameterFile) {
-		queryInputStream = new FileInputStream("src/queryproperties/"+queryFile)
+		Path path = Pats.get("src/queryproperties/"+queryFile)
+		queryInputStream = new FileInputStream(path.toString())
 		queryProperties.load(queryInputStream)
-
-		parameterInputStream = new FileInputStream("src/params/"+parameterFile)
+		if(queryInputStream != null) {
+			queryInputStream.close()
+		}
+		path = Pats.get("src/params/"+parameterFile)
+		parameterInputStream = new FileInputStream(path.toString())
 		paramProperties.load(parameterInputStream)
+		if(paramInputStream != null) {
+			paramInputStream.close()
+		}
 	}
 }

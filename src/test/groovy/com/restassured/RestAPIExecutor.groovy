@@ -103,12 +103,14 @@ class RestAPIExecutor {
 				future = executor.submit(restAPIThreadExecutor)
 				futureResponses.add(future)
 			}
+			def printStatement = '===>testConcurrent completed'
 			for (item in futureResponses) {
 				while (!item.isDone()) {
 					Thread.sleep(2000)
 				}
 				RestAPIResultsPublisher.insertData(RestAPIPreProcessor.sqlObject, item.get(), testCaseName)
-				println "===> testConcurrent completed"+" "+item.get()+" "+item.isDone()
+				def printStatment1 = "${printStatment} ${item.get()} ${item.isDone()}"
+				println printStatment1.toString()
 			}
 		}
 		executor.shutdown()
