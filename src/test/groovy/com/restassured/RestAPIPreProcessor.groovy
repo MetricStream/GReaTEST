@@ -79,7 +79,7 @@ class RestAPIPreProcessor {
 		def header = new Header("Content-Type", "application/x-www-form-urlencoded")
 
 		// Login to the app and get the cookies
-		def response1 = given().formParam("username", property.getProperty("UserName")).formParam("password",property.getProperty("Password")).header(header).request().post(property.getProperty("BaseURI")+"/metricstream/auth/basic")
+		def response1 = given().formParam("username", property.getProperty("UserName")).formParam("password",property.getProperty("Password")).header(header).request().post(property.getProperty("BaseURI"))
 		println "CSRF = " + response1.getCookie("Csrf-Token")
 		println "JESSION = " + response1.getCookie("JSESSION_ID")
 
