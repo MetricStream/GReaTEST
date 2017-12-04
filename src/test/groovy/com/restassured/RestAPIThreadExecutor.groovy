@@ -7,6 +7,7 @@ import static io.restassured.matcher.RestAssuredMatchers.*
 import static org.hamcrest.Matchers.*
 import static org.junit.Assert.*
 
+import java.nio.file.Path
 import java.util.concurrent.Callable
 
 import org.apache.poi.ss.usermodel.Cell;
@@ -143,13 +144,13 @@ public class RestAPIThreadExecutor implements Callable {
 	 * @param parameterFile
 	 */
 	void loadProperties(String queryFile, String parameterFile) {
-		Path path = Pats.get("src/queryproperties/"+queryFile)
+		Path path = Paths.get("src/queryproperties/"+queryFile)
 		queryInputStream = new FileInputStream(path.toString())
 		queryProperties.load(queryInputStream)
 		if(queryInputStream != null) {
 			queryInputStream.close()
 		}
-		path = Pats.get("src/params/"+parameterFile)
+		path = Paths.get("src/params/"+parameterFile)
 		parameterInputStream = new FileInputStream(path.toString())
 		paramProperties.load(parameterInputStream)
 		if(paramInputStream != null) {

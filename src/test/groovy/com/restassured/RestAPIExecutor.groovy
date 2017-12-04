@@ -109,8 +109,6 @@ class RestAPIExecutor {
 					Thread.sleep(2000)
 				}
 				RestAPIResultsPublisher.insertData(RestAPIPreProcessor.sqlObject, item.get(), testCaseName)
-				def printStatment1 = "${printStatment} ${item.get()} ${item.isDone()}"
-				println printStatment1.toString()
 			}
 		}
 		executor.shutdown()
