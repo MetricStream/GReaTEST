@@ -1,3 +1,5 @@
+![MetricStream](blob/master/MetricStream.png)
+
 # GReaTEST
 ==========
 
@@ -15,8 +17,8 @@
 
 
 # What is GReaTEST?
-- GReaTEST - Rest API Testing Tool
-- GReaTEST is a  REST testing and API microbenchmarking tool. Tests are defined as basic YAML files. There is no code required. Logic is written and extensible in Groovy.
+- GReaTEST - Rest API Testing Tool developed by MetricStream
+- GReaTEST is a REST testing and API microbenchmarking tool. Tests are defined as basic YAML files. There is no code required. Logic is written and extensible in Groovy.
 - Providies capability to exetend type of security implementation
 
 # How to Use it?
