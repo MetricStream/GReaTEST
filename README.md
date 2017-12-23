@@ -1,4 +1,4 @@
-![MetricStream](blob/master/MetricStream.png)
+![MetricStream](MetricStream.png)
 
 # GReaTEST
 ==========
